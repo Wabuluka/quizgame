@@ -1,0 +1,20 @@
+{
+  "name": "quizgame",
+  "version": "1.0.0",
+  "description": "Project Description\r Build a quiz game.\r It should be based on your RS research questions. You can set the correct answers yourself and have the user play the quiz while giving them points for any questions they get right. If a user get's all the questions, show them a congratulations message, otherwise, encourage them. Both instances should then allow the user to play again. If you want to add some advanced functionality, shuffle the questions up.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wabuluka/quizgame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wabuluka/quizgame/issues"
+  },
+  "homepage": "https://github.com/Wabuluka/quizgame#readme"
+}

@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    background: #333;
+    color: bisque;
+    font-family: courier;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+} 
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}  
+ol, ul {
+    list-style: none;
+}
+#main{
+    min-height: 80vh;
+    position: relative;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    width: 50%;
+    margin: auto;
+}
+
+/* navigation bar */
+.nav{
+    background: #333;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.nav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.active {
+    background-color: #af984c;
+    color: white;
+}
+.nav .icon {
+    display: none;
+}
+.nav a:hover {
+    background-color: #555;
+    color: white;
+}
+#questions{
+    width: 100%;
+    margin: auto;
+    margin: 20px 0 30px 2px;
+}
+#answer{
+    width: 100%;
+    margin: auto;
+}
+button{
+    width: 44%;
+    float: left;
+    margin:2px;
+    height: 100px;
+    font-weight: 800;
+    background: #af984c;
+    color: #fff;
+}
+button:hover{
+    background: rgb(219, 171, 117);
+}
+
+
+footer{
+    position: relative;
+    bottom: 0;
+}
+
+/* Screens 800px and below */
+@media screen and (max-width: 800px) {
+    html{
+        color: #fff;
+    }
+    .container{
+        width: 80%;
+    }
+    button{
+        width: 48%;
+    }
+}
