@@ -16,6 +16,10 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 ol, ul {
     list-style: none;
 }
+#main{
+    min-height: 80vh;
+    position: relative;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -75,9 +79,20 @@ button:hover{
 }
 
 
+footer{
+    position: relative;
+    bottom: 0;
+}
+
 /* Screens 800px and below */
 @media screen and (max-width: 800px) {
     html{
         color: #fff;
+    }
+    .container{
+        width: 80%;
+    }
+    button{
+        width: 48%;
     }
 }
