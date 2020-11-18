@@ -16,7 +16,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 ol, ul {
     list-style: none;
 }
-#main{
+main{
     min-height: 80vh;
     position: relative;
 }
@@ -30,13 +30,13 @@ img {
 }
 
 /* navigation bar */
-.nav{
+nav{
     background: #333;
     overflow: hidden;
     padding: 0;
     margin: 0;
 }
-.nav a{
+nav a{
     float: left;
     display: block;
     color: #f2f2f2;
@@ -49,19 +49,19 @@ img {
     background-color: #af984c;
     color: white;
 }
-.nav .icon {
+nav .icon {
     display: none;
 }
-.nav a:hover {
+nav a:hover {
     background-color: #555;
     color: white;
 }
-#questions{
+.questions{
     width: 100%;
     margin: auto;
     margin: 20px 0 30px 2px;
 }
-#answer{
+.answer{
     width: 100%;
     margin: auto;
 }

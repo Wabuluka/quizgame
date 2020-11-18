@@ -10,3 +10,9 @@ Currency data
 Macro data
 Forecasts to 2100 for population growth;  electricity and water; education and healthcare; and infrastructure
 News and insights from external as well as internal sources.
+
+receipt
+invoice
+business card
+headed paper
+profile
