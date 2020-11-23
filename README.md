@@ -16,5 +16,5 @@ Deliverable: Javascript functionality
         After 2 seconds, go to the next question. There should be at least 10 questions
         After all questions, display the total score and add a button to restart the game
 
-###How to run
+## How to run
 Simply install Live Server extension on VScode and enjoy
