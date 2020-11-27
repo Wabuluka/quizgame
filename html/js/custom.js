@@ -51,7 +51,10 @@ function buildQuestion(){
             // question and answer to output
             output.push(
                 `<p>${currentQuestion.question}</p>
-                ${answers.join('')} 
+                <div class="row">
+                    ${answers.join('')} 
+                </div>
+                 
                 `
             )
         }
