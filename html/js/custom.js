@@ -39,7 +39,7 @@ function buildQuestion(){
             for(letter in currentQuestion.answers){
                 answers.push(
                     `
-                    <div class="col-sm-6 mt-5">
+                    <div class="col-sm-6 mt-2">
                         <button type="button" class="btn btn-lg btn-block btn-outline-secondary rounded-0" name="question${questionNumber}" value="${letter}">
                             ${letter}. ${currentQuestion.answers[letter]}
                         </button>

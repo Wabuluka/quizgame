@@ -22,26 +22,37 @@ nav{
 main{
     min-height: 80vh;
     position: relative;
+    background: #333;
+    padding-top: 20px;
 }
 img {
     max-width: 100%;
     height: auto;
 }
 
-.questions{
+#questions p{
     /* width: 100%; */
     /* margin: 40px 0 30px 2px; */
+    margin-top: 20px;
+    color: #fff;
+    text-align: center;
+    font-size:2em;
 }
 
 
-button:hover{
+#questions button:hover{
     background: rgb(219, 171, 117);
+    transition: 1s;
 }
 
 
 footer{
     position: relative;
     bottom: 0;
+    color: #fff;
+    min-height: 70px;
+    background: #333;
+    padding-top: 20px;
 }
 
 /* Screens 800px and below */
