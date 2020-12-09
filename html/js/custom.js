@@ -1,6 +1,10 @@
 const questionContainer = document.getElementById('questions');
-
-
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit')
+const previousButton = document.getElementById("previous");
+const nextButton = document.getElementById("next");
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
 // questions
 const questionsList = [
     {
@@ -39,7 +43,7 @@ function buildQuestion(){
             for(letter in currentQuestion.answers){
                 answers.push(
                     `
-                    <div class="col-sm-6 mt-2">
+                    <div class="col-sm-6">
                         <button type="button" class="btn btn-lg btn-block btn-outline-secondary rounded-0" name="question${questionNumber}" value="${letter}">
                             ${letter}. ${currentQuestion.answers[letter]}
                         </button>
@@ -50,11 +54,12 @@ function buildQuestion(){
 
             // question and answer to output
             output.push(
-                `<p>${currentQuestion.question}</p>
-                <div class="row">
-                    ${answers.join('')} 
-                </div>
-                 
+                `<div class="slide">
+                    <p>${currentQuestion.question}</p>
+                    <div class="row">
+                        ${answers.join('')} 
+                    </div>
+                </div> 
                 `
             )
         }
@@ -62,4 +67,57 @@ function buildQuestion(){
     questionContainer.innerHTML = output.join('');
 }
 
+function showResults(){
+    // gather answer containers from the quiz
+    const answerContainers  = quizContianer.querySelector('.answers');
+
+    // keep track of user's answers
+    let numCorrect = 0;
+
+    // for each question
+    questionsList.forEach((currentQuestion, questionNumber) => {
+        // find selected answer
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `button name=question${questionNumber}:clicked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+
+        // if answer is correct
+        if(userAnswer === currentQuestion.correctAnswer){
+            // add to the number of correct answers
+            numCorrect ++;
+            // collor the answer green
+            answerContainers[questionNumber].style.color = 'lightgreen';
+        }
+        // if answer is wrong
+        else{
+            // color the answe red
+            answerContainer[questionNumber].style.color = 'red'
+        }
+    });
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.lenght}`
+}
+function showSlide(n) {
+    slides[currentSlide].classList.remove('active-slide');
+    slides[n].classList.add('active-slide');
+    currentSlide = n;
+    if(currentSlide === 0){
+      previousButton.style.display = 'none';
+    }
+    else{
+      previousButton.style.display = 'inline-block';
+    }
+    if(currentSlide === slides.length-1){
+      nextButton.style.display = 'none';
+      submitButton.style.display = 'inline-block';
+    }
+    else{
+      nextButton.style.display = 'inline-block';
+      submitButton.style.display = 'none';
+    }
+}
 buildQuestion()
+
+// even listener
+submitButton.addEventListener('click', showResults);
